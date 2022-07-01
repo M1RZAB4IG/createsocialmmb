@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "216168634193",
+    "project_id": "createsocialmmb",
+    "storage_bucket": "createsocialmmb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216168634193:android:3ddce925ad55ab1da22570",
+        "android_client_info": {
+          "package_name": "com.example.createsocial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216168634193-8ketr04gftbtj57kjk8kuns00kvq4005.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA41s0CkyrneVcuEw9RElmGFKkONdUaRDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216168634193-8ketr04gftbtj57kjk8kuns00kvq4005.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "216168634193-gp26circpsf8vm06rc93i14k4f7f5vqe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.createsocial"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
