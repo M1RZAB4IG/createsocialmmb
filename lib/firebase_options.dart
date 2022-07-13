@@ -44,40 +44,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBkEjuo2MayJ5QHwJPdYLuORzTHnAzpXNU',
-    appId: '1:684296137056:web:6c2561cbf5259bbb0a1605',
-    messagingSenderId: '684296137056',
-    projectId: 'social-by-creationdriven',
-    authDomain: 'social-by-creationdriven.firebaseapp.com',
-    storageBucket: 'social-by-creationdriven.appspot.com',
-    measurementId: 'G-GC24G5E6X9',
+    apiKey: 'AIzaSyDU_wT5ZciQLRPjqBQFDxJxwJob9kJq60w',
+    appId: '1:216168634193:web:d5cc0fba82ef0456a22570',
+    messagingSenderId: '216168634193',
+    projectId: 'createsocialmmb',
+    authDomain: 'createsocialmmb.firebaseapp.com',
+    storageBucket: 'createsocialmmb.appspot.com',
+    measurementId: 'G-PM7YTWZFTK',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCsWS5akxO587bNqvur_YYW5E969J_X1EY',
-    appId: '1:684296137056:android:5fb2fb2b88fae60b0a1605',
-    messagingSenderId: '684296137056',
-    projectId: 'social-by-creationdriven',
-    storageBucket: 'social-by-creationdriven.appspot.com',
+    apiKey: 'AIzaSyA41s0CkyrneVcuEw9RElmGFKkONdUaRDg',
+    appId: '1:216168634193:android:3ddce925ad55ab1da22570',
+    messagingSenderId: '216168634193',
+    projectId: 'createsocialmmb',
+    storageBucket: 'createsocialmmb.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyC4bDNR3EqBkYyR4VRcpRHbStuX-kL6nS8',
-    appId: '1:684296137056:ios:fc9c257a018a6ec10a1605',
-    messagingSenderId: '684296137056',
-    projectId: 'social-by-creationdriven',
-    storageBucket: 'social-by-creationdriven.appspot.com',
-    iosClientId: '684296137056-mmdkqjsh229l1et0bc805j8pq3v58q5k.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCyuG5FiGbEannvG4si8JnFjR3xX_IpOVU',
+    appId: '1:216168634193:ios:e11367405a54a8f6a22570',
+    messagingSenderId: '216168634193',
+    projectId: 'createsocialmmb',
+    storageBucket: 'createsocialmmb.appspot.com',
+    iosClientId: '216168634193-ofiigjr2bdnptn4e41bkp63eodc1pfkn.apps.googleusercontent.com',
     iosBundleId: 'com.creationdriven.createSocial',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyC4bDNR3EqBkYyR4VRcpRHbStuX-kL6nS8',
-    appId: '1:684296137056:ios:fc9c257a018a6ec10a1605',
-    messagingSenderId: '684296137056',
-    projectId: 'social-by-creationdriven',
-    storageBucket: 'social-by-creationdriven.appspot.com',
-    iosClientId: '684296137056-mmdkqjsh229l1et0bc805j8pq3v58q5k.apps.googleusercontent.com',
-    iosBundleId: 'com.creationdriven.createSocial',
+    apiKey: 'AIzaSyCyuG5FiGbEannvG4si8JnFjR3xX_IpOVU',
+    appId: '1:216168634193:ios:873c39ed8afb42c4a22570',
+    messagingSenderId: '216168634193',
+    projectId: 'createsocialmmb',
+    storageBucket: 'createsocialmmb.appspot.com',
+    iosClientId: '216168634193-gp26circpsf8vm06rc93i14k4f7f5vqe.apps.googleusercontent.com',
+    iosBundleId: 'com.example.createsocial',
   );
 }

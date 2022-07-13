@@ -30,6 +30,7 @@ class _PostFormState extends State<PostForm> {
           ),
           OutlinedButton(
               onPressed: _submitPost, child: const Text("Submit Post"))
+              ,SizedBox(height: 200,)
         ],
       ),
     );

@@ -5,8 +5,7 @@ import 'package:createsocial/model/post.dart';
 import 'package:createsocial/model/user.dart';
 
 class FirestoreService {
-  // ignore: unused_field
-  final FirebaseFirestore _db = FirebaseFirestore.instance;
+
   static Map<String, User> userMap = {};
   static Map<String, Post> postMap = {};
 
@@ -52,6 +51,7 @@ class FirestoreService {
     for (var doc in snapshot.docs) {
       Post post = Post.fromJson(doc.id, doc.data());
       posts.add(post);
+      print(post.id);
       postMap[post.id] = post;
     }
     return posts;
@@ -70,6 +70,7 @@ class FirestoreService {
     data["createdAt"] = Timestamp.now();
     try {
       await postsCollection.add(data);
+      print("answer");
       return true;
     } catch (e) {
       return false;

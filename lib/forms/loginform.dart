@@ -25,7 +25,7 @@ class _LoginFormState extends State<LoginForm> {
         ? const Loading()
         : Form(
             key: _formKey,
-            child: Column(
+            child: Center( child: Column(mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -71,7 +71,7 @@ class _LoginFormState extends State<LoginForm> {
                     child: const Text("Forgot Password"))
               ],
             ),
-          );
+         ) );
   }
 
   Future<void> login(BuildContext context) async {

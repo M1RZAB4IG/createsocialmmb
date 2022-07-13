@@ -25,6 +25,7 @@ class _HomeState extends State<HomePage> {
         appBar: AppBar(
           title: const Text("Social Stream"),
         ),
+        resizeToAvoidBottomInset: true,
         floatingActionButton: FloatingActionButton(
           onPressed: _showPostFeild,
           child: const Icon(Icons.post_add),
