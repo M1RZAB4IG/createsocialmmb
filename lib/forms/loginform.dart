@@ -1,4 +1,6 @@
+import 'package:createsocial/forms/registerform.dart';
 import 'package:createsocial/pages/home.dart';
+import 'package:createsocial/pages/registration.dart';
 import 'package:createsocial/style/style.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -64,6 +66,14 @@ class _LoginFormState extends State<LoginForm> {
                       });
                     },
                     child: const Text("LOGIN")),
+                     OutlinedButton(
+                    onPressed: () {
+                      Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (_) => const Registration()));
+                    },
+                    child: const Text("REGISTER")),
                 OutlinedButton(
                     onPressed: () {
                       forgot();
@@ -71,7 +81,8 @@ class _LoginFormState extends State<LoginForm> {
                     child: const Text("Forgot Password"))
               ],
             ),
-         ) );
+         )
+         );
   }
 
   Future<void> login(BuildContext context) async {

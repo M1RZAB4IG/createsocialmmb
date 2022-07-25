@@ -17,7 +17,7 @@ class _State extends State<Profile> {
     return Scaffold(
       appBar: AppBar(title: Text(widget.observedUser.name)),
       body: Center(
-        child: Text(widget.observedUser.bio),
+        child: Text(widget.observedUser.name),
       ),
     );
   }

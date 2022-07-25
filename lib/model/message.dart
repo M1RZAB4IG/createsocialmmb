@@ -1,31 +1,30 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-/*
-POST
-id(PRIMARY KEY )---   content   --- type    --- createdAt -- creator
-STRING                STRING        INTEGER     DateTime    STRING
-*/
-class Post {
+class Message {
   final String id;
   final String content; // The typed message or the url of the image
-  int type; // The type of message this is 0:Post 1:UploadedImage 2:Sticker
+  final int
+      type; // The type of message this is 0:Post 1:UploadedImage 2:Sticker
   final Timestamp createdAt; // Timestamp of message
-  final String creator; // User id of the creator
+  final String fromId; // User id of the creator
+  final String convoId; // User id of the creator
 
-  Post(
+  Message(
       {required this.id,
       required this.content,
       required this.type,
       required this.createdAt,
-      required this.creator});
+      required this.fromId,
+      required this.convoId});
 
-  factory Post.fromJson(String id, Map<String, dynamic> data) {
-    return Post(
+  factory Message.fromJson(String id, Map<String, dynamic> data) {
+    return Message(
         id: id,
         content: data["content"],
         type: data["type"] ?? 0,
         createdAt: data["createdAt"],
-        creator: data["creator"]);
+        fromId: data["fromId"],
+        convoId: data["conversationId"]);
   }
 
   Map<String, dynamic> toJSON() {
@@ -33,7 +32,8 @@ class Post {
       "content": content,
       "type": type,
       "createdAt": createdAt,
-      "creator": creator
+      "fromId": fromId,
+      "conversationId": convoId
     };
   }
 }

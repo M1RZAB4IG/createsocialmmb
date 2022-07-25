@@ -2,6 +2,8 @@
 import 'package:createsocial/services/firestore_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:createsocial/model/post.dart';
+
 
 class PostForm extends StatefulWidget {
   const PostForm({Key? key}) : super(key: key);

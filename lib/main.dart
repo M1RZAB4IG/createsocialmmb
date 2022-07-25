@@ -1,4 +1,8 @@
+import 'package:createsocial/forms/registerform.dart';
 import 'package:createsocial/pages/authentication.dart';
+import 'package:createsocial/pages/driver.dart';
+import 'package:createsocial/services/firestore_service.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:flutter/material.dart';

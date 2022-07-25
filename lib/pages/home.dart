@@ -1,10 +1,11 @@
 import 'package:createsocial/forms/postform.dart';
 import 'package:createsocial/model/post.dart';
+import 'package:createsocial/pages/conversations.dart';
+import 'package:createsocial/pages/driver.dart';
 import 'package:createsocial/pages/profile.dart';
 import 'package:createsocial/services/firestore_service.dart';
 import 'package:createsocial/widgets/loading.dart';
-// ignore: library_prefixes
-import 'package:firebase_auth/firebase_auth.dart' as fbAuth;
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,23 +16,38 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomeState extends State<HomePage> {
-  // ignore: unused_field
-  final fbAuth.FirebaseAuth _auth = fbAuth.FirebaseAuth.instance;
   final FirestoreService _fs = FirestoreService();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Social Stream"),
+          title: const Text(
+            "Social Stream",
+            style: TextStyle(fontWeight: FontWeight.w700),
+          ),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => ConversationsPage()));
+                },
+                icon: const Icon(Icons.message)),
+            IconButton(
+                onPressed: () async {
+                  await FirebaseAuth.instance.signOut();
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => Driver()));
+                },
+                icon: const Icon(Icons.settings))
+          ],
         ),
-        resizeToAvoidBottomInset: true,
         floatingActionButton: FloatingActionButton(
           onPressed: _showPostFeild,
           child: const Icon(Icons.post_add),
         ),
         body: StreamBuilder<List<Post>>(
-          stream: _fs.post,
+          stream: _fs.posts,
           builder: (BuildContext context, AsyncSnapshot<List<Post>> snapshots) {
             if (snapshots.hasError) {
               return Center(child: Text(snapshots.error.toString()));
@@ -39,13 +55,13 @@ class _HomeState extends State<HomePage> {
               var posts = snapshots.data!;
               var filterpost = [];
               for (var element in posts) {
-                if (element.creator == "Some Id") {
+                if (element.creator == "SomeId") {
                   filterpost.add(element);
                 }
               }
 
               return posts.isEmpty
-                  ? const Center(child: Text("No post"))
+                  ? const Center(child: Text("No post available"))
                   : ListView.builder(
                       itemCount: posts.length,
                       itemBuilder: (BuildContext context, int index) =>
